@@ -8,7 +8,13 @@ Some example she gives are given in this code block \ref{lst:exampleregex}.
 \begin{lstlisting}[language=bash,label=lst:exampleregex,caption=Regex examples]
 # Here are some examples she has shown in the video.
 /ab/
-# will match ab, abdawidojad, dbabsdab, helloabhello,
+# will match ab, abdawidojad, dbabsdab, helloabhello
 /\bab\b/ 
-# will only match ab from the previous given examples.
+# will only match ab from the previous given examples
+/a(=?b)/
+# will met all the a with b behind it.
+/a{3}/
+# will match exactly 3 a's so aaa
+/a{3,}/
+# will match 3 or more a's
 \end{lstlisting}
