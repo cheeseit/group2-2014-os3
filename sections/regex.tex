@@ -1,10 +1,12 @@
-For the regular expression homework we have seen the youtube video that can be found here:. In this video regular expressions are taught from the absolute basics to some more advanced uses. It is a very good video for beginners to watch and it really demystifies most of the the weird constructions used in regular expressions. Some good tips to take away from this presentations are:
+For the regular expression homework we have seen the youtube video that can be found here: \cite{leaverou1}. In this video regular expressions are taught from the absolute basics to some more advanced uses. It is a very good video for beginners to watch and it really demystifies most of the the weird constructions used in regular expressions. Some good tips to take away from this presentations are:
 \begin{itemize}
 \item It is better to have false positives than false negatives
-\item Do not make the regular expression too complicated, because the next you will have to change it will be impossible
+\item Do not make the regular expression too complicated, because the next time you will have to change it will be impossible
 \end{itemize}
 \begin{lstlisting}[language=bash,label=lst:exampleregex,caption=Regex examples]
-
 # Here are some examples she has shown in the video.
+/ab/
+will match ab, abdawidojad, dbabsdab, helloabhello,
+/\bab\b/ will only match ab from the previous given examples.
 
 \end{lstlisting}
