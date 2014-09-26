@@ -17,7 +17,7 @@ XSL-FO documents contain two required sections. The first section details a list
 \end{enumerate}
 
 
-Each of these regions contain block areas. The block areas can be contain other block areas or plain text or other kinds of formatting like a list or table. Each page master needs to have an unique name. With this you can define different standard layouts for different kinds pages. Some of the things that can be defined in a page master are: the size of the pages and the margins of the given regions. More importantly, it can define sequences of pages that allow for effects where the odd and even pages look different The flow tag specifies what will be outputted to the page. The tag for the is fo:sequence this defines an output page. Each output page refers to a master page which defines the layout. The flow tags will output in the data in sequence. The flow tag can be used within each of the regions which have been specified before. Within the flow tag you will define a block where you will put in your data.2). So output is mostly nested inside <fo:block> elements, nested inside <fo:flow> elements, nested inside <fo:page-sequence> elements
+Each of these regions contain \textbf{block areas}. The block areas can be contain other block areas or plain text or other kinds of formatting like a list or table. Each page master needs to have an unique name. With this you can define different standard layouts for different kinds pages. Some of the things that can be defined in a page master are: the size of the pages and the margins of the given regions. More importantly, it can define sequences of pages that allow for effects where the odd and even pages look different The flow tag specifies what will be outputted to the page. The tag for the is fo:sequence this defines an output page. Each output page refers to a master page which defines the layout. The flow tags will output in the data in sequence. The flow tag can be used within each of the regions which have been specified before. Within the flow tag you will define a block where you will put in your data.2). So output is mostly nested inside <fo:block> elements, nested inside <fo:flow> elements, nested inside <fo:page-sequence> elements
 
 \subsection{Features of XSL-FO} 
 \begin{enumerate}
@@ -121,6 +121,12 @@ margin-left="1cm" margin-right="1cm">
  </fo:flow>
 </fo:page-sequence>
 \end{lstlisting}
+\begin{tabular}{|l|l|l|}
+\hline
+This & is & a \\ \hline
+table & in & latex \\ \hline
+
+\end{tabular}
 \cite{informit} 
 \subsection{Lists in XML FO}
 \begin{lstlisting}[language=xml]
