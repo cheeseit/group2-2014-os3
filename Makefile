@@ -12,7 +12,6 @@ all: $(TEX).pdf
 # The pdf tells latexmk to generate a pdf
 $(TEX).pdf: $(TEX).tex
 	latexmk -pdf -pdflatex="pdflatex" $(TEX).tex
-	latexmk -c
 
 clean:
 	latexmk -CA
