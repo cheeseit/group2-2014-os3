@@ -1,1 +1,111 @@
-hallo
+h
+\subsection{How to set up a GIT} 
+
+\begin{figure}[h!]
+\centering
+\label{fig:Gitlogo}
+\caption{Git logo}
+\includegraphics[width=50mm]{images/Git.png}
+\end{figure}
+To have more info on git\ref{fig:Gitlogo} here the website: \cite{gitinfo}
+\textbf{install git}
+\begin{lstlisting}
+  apt-get install git
+\end{lstlisting}
+\textbf{Add username and mail}
+\begin{lstlisting}
+  git config --global user.email "james.gratchoff@os3.nl"
+  git config --global user.name "jgratchoff"
+\end{lstlisting}
+
+\textbf{The next step is to create a working directory}
+\begin{lstlisting}
+  mkdir project
+  cd project
+  git init
+\end{lstlisting}
+
+\textbf{Add a file}
+\begin{lstlisting}
+  git add ass1xmldata.xml
+\end{lstlisting}
+
+\textbf{Commit the first file}
+\begin{lstlisting}
+  git commit -m "first commit"
+  [master (root-commit) 424ddb4] first commit
+  1 file changed, 34 insertions(+)
+  create mode 100644 ass1xmldata.xml
+\end{lstlisting}
+
+\textbf{To get the git status:}
+\begin{lstlisting}
+  git status
+  On branch master 
+  nothing to commit, working directory clean
+\end{lstlisting}
+\textbf{Then I edited the file by adding some xml data and if we process git status again we have:}
+\begin{lstlisting}
+  git status
+  On branch master
+  Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+modified:   ass1xmldata.xml
+\end{lstlisting}
+\textbf{If we add again the xml file with:}
+\begin{lstlisting}
+  git add ass1xmldata.xml 
+\end{lstlisting}
+\textbf{And we check the status again we can see that the file has been staged and ready to be commited:}
+\begin{lstlisting}
+  git status
+  On branch master
+  Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+modified:   ass1xmldata.xml
+\end{lstlisting}
+\textbf{We then commit the file ( we need to add a commit message that will be used for the log):}
+\begin{lstlisting}
+  git commit 
+  [master 87eb8bd] added
+  1 file changed, 1 insertion(+)
+\end{lstlisting}
+\textbf{The log are then accessible with:}
+\begin{lstlisting}
+  git log
+  commit 87eb8bdc90aaeb94c5a5b909c6cb9edd617cb2b8
+  Author: jgratchoff <james.gratchoff@os3.nl>
+  Date:   Thu Sep 18 14:59:50 2014 +0200
+  added
+  commit 424ddb440b21ee0bb34aacee274bc4d4e247b288
+  Author: jgratchoff <james.gratchoff@os3.nl>
+  Date:   Thu Sep 18 14:57:23 2014 +0200
+  first commit
+\end{lstlisting}
+\textbf{In order to remove a file:}
+\begin{lstlisting}
+  git rm ass1xmldata.xml 
+  rm 'ass1xmldata.xml'
+  git commit -m "Deleted xml file"
+  [master 7579ab3] Deleted xml file
+  1 file changed, 35 deletions(-)
+  delete mode 100644 ass1xmldata.xml
+\end{lstlisting}
+\textbf{We can assess that change in the logs:}
+\begin{lstlisting}
+  git log
+  commit 7579ab37408be4b7d56a4471d18b60f4936201e6
+  Author: jgratchoff <james.gratchoff@os3.nl>
+  Date:   Thu Sep 18 15:32:18 2014 +0200
+  Deleted xml file
+  commit 87eb8bdc90aaeb94c5a5b909c6cb9edd617cb2b8
+  Author: jgratchoff <james.gratchoff@os3.nl>
+  Date:   Thu Sep 18 14:59:50 2014 +0200
+  added
+  commit 424ddb440b21ee0bb34aacee274bc4d4e247b288
+  Author: jgratchoff <james.gratchoff@os3.nl>
+  Date:   Thu Sep 18 14:57:23 2014 +0200
+  first commit
+  \end{lstlisting}

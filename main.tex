@@ -1,13 +1,53 @@
-\documentclass[12pt,a4paper]{article}
-\usepackage[english]{babel}
-\usepackage{graphicx,amsmath,listings,hyperref}
+\documentclass{article}
+\usepackage{graphicx,amsmath,listings,hyperref,color}
+\newcommand*{\plogo}{\fbox{$\mathcal{PL}$}}
+\newcommand*{\titleGP}{\begingroup
+\centering % Center all text
+\vspace*{\baselineskip} % White space at the top of the page
 
-\begin{document}
-\title{Homework Essential skills}
-\author{Names: Harm Dermois, James Gratchoff and Tarcan Turgut }
-\date{}
-\maketitle
+\vspace*{2\baselineskip} % Whitespace between location/year and editors
 
+\vspace*{2\baselineskip} % Whitespace between location/year and editors
+
+\vspace*{2\baselineskip} % Whitespace between location/year and editors
+
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} % Thick horizontal line
+\rule{\textwidth}{0.4pt}\\[\baselineskip] % Thin horizontal line
+
+{\LARGE Homework Essential skills}\\[0.2\baselineskip] % Title
+
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} % Thin horizontal line
+\rule{\textwidth}{1.6pt}\\[\baselineskip] % Thick horizontal line
+
+
+\vspace*{2\baselineskip} % Whitespace between location/year and editors
+
+Edited by \\[\baselineskip]
+{\Large Harm Dermois \\ James Gratchoff \\ Tarcan Turgut\par} % Editor list
+{\itshape The University of Amsterdam \par} % Editor affiliation
+
+\vfill % Whitespace between editor names and publisher logo
+
+\vspace*{2\baselineskip} % Whitespace between location/year and editors
+
+\plogo \\[0.3\baselineskip] % Publisher logo
+{\scshape 2014} \\[0.3\baselineskip] % Year published
+{\large ES}\par % Publisher
+
+\vspace*{2\baselineskip} % Whitespace between location/year and editors
+
+\endgroup}
+\begin{document} 
+
+\pagestyle{empty} % Removes page numbers
+
+\titleGP % This command includes the title page
+
+\vspace*{10\baselineskip} % Whitespace between location/year and editors
+\tableofcontents
+
+
+\vspace*{25\baselineskip}
 \section{XML}
 \input{sections/xml.tex}
 \section{Regular expressions}
@@ -16,6 +56,10 @@
 \input{sections/recursivemake.tex}
 \section{XUgrep}
 \input{sections/xugrep.tex}
+\section{Git}
+\input{sections/git.tex}
+
+\vspace*{2\baselineskip} % Whitespace between location/year and editors
 
 \begin{thebibliography}{9}
 \bibitem{leaverou1}
@@ -25,9 +69,11 @@
 	Peter Miller,
 	\url{http://aegis.sourceforge.net/auug97.pdf}
 \bibitem{xutools}
-	https://www.usenix.org/conference/lisa12/technical-sessions/presentation/weaver
-\bibitem{informit}
-	\url{http://www.informit.com/library/content.aspx?b=STY_XML_21days&seqNum=125}
+	\url{https://www.usenix.org/conference/lisa12/technical-sessions/presentation/weaver}
+\bibitem{informit}	\url{http://www.informit.com/library/content.aspx?b=STY_XML_21days&seqNum=125}
+\bibitem{gitinfo}
+	Git info,
+	\url{http://git-scm.com/}
 \end{thebibliography}
 
 

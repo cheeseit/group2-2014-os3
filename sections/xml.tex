@@ -17,7 +17,7 @@ XSL-FO documents contain two required sections. The first section details a list
 \end{enumerate}
 
 
-Each of these regions contain \textbf{block areas}. The block areas can be contain other block areas or plain text or other kinds of formatting like a list or table. Each page master needs to have an unique name. With this you can define different standard layouts for different kinds pages. Some of the things that can be defined in a page master are: the size of the pages and the margins of the given regions. More importantly, it can define sequences of pages that allow for effects where the odd and even pages look different The flow tag specifies what will be outputted to the page. The tag for the is fo:sequence this defines an output page. Each output page refers to a master page which defines the layout. The flow tags will output in the data in sequence. The flow tag can be used within each of the regions which have been specified before. Within the flow tag you will define a block where you will put in your data.2). So output is mostly nested inside <fo:block> elements, nested inside <fo:flow> elements, nested inside <fo:page-sequence> elements
+Each of these regions contain \textbf{block areas}. \textit{The block areas can be contain {\color{red}other block areas} or {\color{red}plain text} or other kinds of formatting like a list or table.} Each page master needs to have an unique name. With this you can define different standard layouts for different kinds pages. Some of the things that can be defined in a page master are: the size of the pages and the margins of the given regions. More importantly, it can define sequences of pages that allow for effects where the odd and even pages look different The flow tag specifies what will be outputted to the page. The tag for the is fo:sequence this defines an output page. Each output page refers to a master page which defines the layout. The flow tags will output in the data in sequence. The flow tag can be used within each of the regions which have been specified before. Within the flow tag you will define a block where you will put in your data.2). So output is mostly nested inside $<fo:block>$ elements, nested inside $<fo:flow>$ elements, nested inside $<fo:page-sequence>$ elements
 
 \subsection{Features of XSL-FO} 
 \begin{enumerate}
@@ -62,7 +62,8 @@ XSL-FO 1.0 was fairly restrictive about what text was allowed to go in what area
 \end{lstlisting}
 
 \item Page Layout (defines the properties of a page including the size, margins, direction of the text flow) 
-\begin{figure}
+\begin{figure}[h!]
+\centering
 \label{fig:layoutxmlfo}
 \caption{Page layout for XML fo}
 \includegraphics[origin=c]{images/layoutxmlfo.jpg}
@@ -90,7 +91,8 @@ margin-left="1cm" margin-right="1cm">
   </fo:flow>
 </fo:page-sequence>
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[h!]
+\centering
 \label{fig:fo2}
 \caption{Page layout for XML fo}
 \includegraphics[origin=c]{images/fo2.jpg}
